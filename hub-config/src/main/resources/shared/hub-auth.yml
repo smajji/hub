@@ -1,0 +1,15 @@
+logging:
+  level:
+    org.springframework.security: DEBUG
+    
+server:
+  context-path: /uaa
+  port: 5000 
+
+ldap:
+  url: ldap://ds.cisco.com:389
+  base: OU=Employees,OU=Cisco Users,DC=cisco,DC=com
+  userDn: cn=ipcentral.gen,ou=generics,ou=cisco users,dc=cisco,dc=com
+  userpassword: ipcentral.gen
+   
+ 

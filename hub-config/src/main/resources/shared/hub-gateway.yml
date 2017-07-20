@@ -1,0 +1,18 @@
+zuul:
+  ignoredServices: '*'
+  host:
+    connect-timeout-millis: 20000
+    socket-timeout-millis: 20000
+  sensitiveHeaders: Cookie,Set-Cookie    
+
+  routes:
+    auth-service:
+        path: /uaa/**
+        url: http://localhost:5000
+        stripPrefix: false
+        
+        
+server:
+  port: 4000
+   
+ 
