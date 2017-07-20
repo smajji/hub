@@ -1,6 +1,6 @@
 # hub
 
-**A proof-of-concept application which demonstrates microservice architecture, with Auth and config server**
+**A proof-of-concept application which demonstrates microservice architecture, with Auth, ZUUL API gateway, Eureka service discovery and centralized config server**
 
 This is a proof-of-concept application, which demonstrates [Microservice Architecture Pattern](http://martinfowler.com/microservices/) using Spring Boot, Spring Cloud and Docker(Docker, integration TBD).
 
