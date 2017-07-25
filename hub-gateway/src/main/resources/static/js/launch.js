@@ -69,7 +69,7 @@ function getCurrentAccount() {
 
 	if (token) {
 		$.ajax({
-			url: 'uaa/current',
+			url: 'components/current',
 			datatype: 'json',
 			type: 'get',
 			headers: {'Authorization': token},

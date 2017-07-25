@@ -11,6 +11,11 @@ zuul:
         url: http://localhost:5000
         stripPrefix: false
         
+    hub-component-service:
+        path: /components/**
+        serviceId: hub-component-service
+        stripPrefix: false
+        
         
 server:
   port: 4000
