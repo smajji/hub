@@ -2,6 +2,14 @@ logging:
   level:
     org.springframework.security: DEBUG
     
+hystrix:
+  command:
+    default:
+      circuitBreaker:
+        enabled: false
+      execution:
+        timeout:
+          enabled: false    
 server:
   context-path: /components
   port: 6000

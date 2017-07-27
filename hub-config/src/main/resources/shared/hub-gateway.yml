@@ -1,8 +1,16 @@
+hystrix:
+  command:
+    default:
+      circuitBreaker:
+        enabled: false
+      execution:
+        timeout:
+          enabled: false
 zuul:
   ignoredServices: '*'
   host:
-    connect-timeout-millis: 20000
-    socket-timeout-millis: 20000
+    connect-timeout-millis: 2000000
+    socket-timeout-millis: 2000000
   sensitiveHeaders: Cookie,Set-Cookie    
 
   routes:
@@ -15,6 +23,7 @@ zuul:
         path: /components/**
         serviceId: hub-component-service
         stripPrefix: false
+        sensitiveHeaders: Cookie,Set-Cookie            
         
         
 server:
