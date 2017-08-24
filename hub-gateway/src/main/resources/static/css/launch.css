@@ -286,6 +286,27 @@ only screen and (min-resolution: 144dpi) {
 	right: -20px;
 }
 
+#cisco {
+	display: block;
+	background: url("../images/cisco.gif") no-repeat;
+	background-size: 178px 178px;
+	width: 178px;
+	height: 178px;
+	position: relative;
+	margin: auto;
+	z-index: 50;
+}
+#ciscotext {		
+	text-transform: none;	
+	font-family: "Museo-500";
+	font-size: 24px;
+	width: 172px;
+	height: 65px;
+	position: relative;
+	margin: auto;
+	margin-top: 36px;
+}	
+
 /* FIRST CARD FORMS */
 
 input[class="frontforms"]{

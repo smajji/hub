@@ -25,10 +25,7 @@ public class ComponentController {
 	AuthServiceClient authClient;
 
 	@RequestMapping(path = "/current", method = RequestMethod.GET)
-	public Account getCurrentAccount(HttpServletRequest request) {
-//		Principal principal = authClient.getUser();
-//		System.out.println("logged in user==>"+principal.getName());
-		System.out.println("Auth-->"+request.getHeader("Authorization"));
+	public Account getCurrentAccount(HttpServletRequest request) {		
 		String loggedInUser = authClient.getLoggedInUser(request.getHeader("Authorization"));
 		ObjectMapper mapper = new ObjectMapper();
 		Account account = null;

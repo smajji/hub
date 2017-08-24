@@ -866,36 +866,40 @@ function launchStatistic() {
 }
 
 function jsonDataSave() {
-    if (global.savePermit) {
-        $.ajax({
-            url: 'accounts/current',
-            datatype: 'json',
-            type: "put",
-            contentType: "application/json",
-            headers: {'Authorization': 'Bearer ' + getOauthTokenFromStorage()},
-            data: JSON.stringify({
-                note: user.notes,
-                incomes: $.map(incomes, function(value) {return [value]}),
-                expenses: $.map(expenses, function(value) {return [value]}),
-                saving: {
-                    amount: Math.ceil(savings.freeMoney),
-                    capitalization: savings.capitalization,
-                    deposit: savings.deposit,
-                    currency: user.checkedCurr,
-                    interest: savings.percent
-                }
-            }),
-            success: function () {
-                $("#leftborder, #rightborder, #centerborder").addClass("saveaction");
-                setTimeout(function() {
-                    $("#leftborder, #rightborder, #centerborder").removeClass("saveaction");
-                }, 400);
-            },
-            error: function () {
-                alert("An error during data saving. Please, try again later");
-            }
-        });
-    }
+	$("#leftborder, #rightborder, #centerborder").addClass("saveaction");
+    setTimeout(function() {
+        $("#leftborder, #rightborder, #centerborder").removeClass("saveaction");
+    }, 400);
+//    if (global.savePermit) {
+//        $.ajax({
+//            url: 'accounts/current',
+//            datatype: 'json',
+//            type: "put",
+//            contentType: "application/json",
+//            headers: {'Authorization': 'Bearer ' + getOauthTokenFromStorage()},
+//            data: JSON.stringify({
+//                note: user.notes,
+//                incomes: $.map(incomes, function(value) {return [value]}),
+//                expenses: $.map(expenses, function(value) {return [value]}),
+//                saving: {
+//                    amount: Math.ceil(savings.freeMoney),
+//                    capitalization: savings.capitalization,
+//                    deposit: savings.deposit,
+//                    currency: user.checkedCurr,
+//                    interest: savings.percent
+//                }
+//            }),
+//            success: function () {
+//                $("#leftborder, #rightborder, #centerborder").addClass("saveaction");
+//                setTimeout(function() {
+//                    $("#leftborder, #rightborder, #centerborder").removeClass("saveaction");
+//                }, 400);
+//            },
+//            error: function () {
+//                alert("An error during data saving. Please, try again later");
+//            }
+//        });
+//    }
 }
 
 function fadeStatistic() {
